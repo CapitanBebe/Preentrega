@@ -10,12 +10,17 @@ public class Player : MonoBehaviour
     public float sensitivity = 2f;
     public Vector3 deltaMove;
     public float speed = 10;
-    public float jumph;
     public Rigidbody rb;
     bool grounded = false;
+    public Collider sword;
+    float attack;
+    public Collider shield;
+    float defense;
     // Start is called before the first frame update
     void Start()
     {
+        sword= GetComponent<Collider>();
+        sword = GetComponent<Collider>();
         Cursor.lockState = CursorLockMode.Locked;
     }
     // Update is called once per frame
@@ -81,7 +86,7 @@ public class Player : MonoBehaviour
             grounded = false;
         }
     }
-    void attackDefense() // ----------------------------- Attack & Defense -----------------------------------
+    void attackDefense() // -------------------------- attack & defense ----------------------------------
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {

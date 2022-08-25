@@ -8,15 +8,13 @@ public class Enemies : MonoBehaviour
     [SerializeField] EnemyMoves enemyMove;
     [SerializeField] Transform targetPosition;
     public GameObject Enemigos;
-    public float speed = 1f;
+    public float speed = 5f;
     public Transform target;
     public Transform targetRotate;
     public float rotationTime;
     float spawn = 0;
     Quaternion targetRotation;
     bool rotating = false;
-    public GameObject destroy;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -64,12 +62,5 @@ public class Enemies : MonoBehaviour
             }
         }
     }
-    private void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.CompareTag("Sword"))
-        {
-            Debug.Log("toco");
-            Destroy(destroy,0);
-        }
-    }
+    
 }
