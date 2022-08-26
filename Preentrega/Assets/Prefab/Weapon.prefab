@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2570294246544678274}
   m_Layer: 0
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ BoxCollider:
   m_GameObject: {fileID: 4574626427455777251}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.15, y: 1.2, z: 0.15}
   m_Center: {x: 0, y: 0.67, z: 0}

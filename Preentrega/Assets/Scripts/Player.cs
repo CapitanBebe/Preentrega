@@ -26,15 +26,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement();
+        Movement();
         MouseRotation();
-        attackDefense();
+        AttackDefense();
     }
     void MovePlayer(Vector3 direction)
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.Translate(speed * Time.deltaTime * direction);
     }
-    void movement() // ----------------------------- Move WASD & Jump -----------------------------------
+    void Movement() // ----------------------------- Move WASD & Jump -----------------------------------
     {
         
         if (Input.GetKey(KeyCode.W))
@@ -86,8 +86,9 @@ public class Player : MonoBehaviour
             grounded = false;
         }
     }
-    void attackDefense() // -------------------------- attack & defense ----------------------------------
+    void AttackDefense() // -------------------------- attack & defense ----------------------------------
     {
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             playerMoves.SetBool("Attack", true);

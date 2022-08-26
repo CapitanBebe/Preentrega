@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 5111532605544486483}
   - component: {fileID: 3812075866614902196}
   - component: {fileID: 6485485761564758916}
+  - component: {fileID: 7756277886512054828}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -143,7 +144,7 @@ Animator:
   m_GameObject: {fileID: 6666783773287921498}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 032e9c3d6b8f7bd4281b52741574f3af, type: 3}
-  m_Controller: {fileID: 9100000, guid: 76977a7b10402cb498f559cc19a4f01a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 65e6a20994e98ee4cadf8d55ee4ed70f, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -183,12 +184,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMove: 0
   targetPosition: {fileID: 2066896392038131574, guid: 45288819fde2143449a96207b14db0bb, type: 3}
+  SlimeTurtle: {fileID: 6760440725859845430}
   Enemigos: {fileID: 6666783773287921498}
   speed: 5
   target: {fileID: 2066896392038131574, guid: 45288819fde2143449a96207b14db0bb, type: 3}
   targetRotate: {fileID: 2066896392038131574, guid: 45288819fde2143449a96207b14db0bb, type: 3}
   rotationTime: 0
-  destroy: {fileID: 6666783773287921498}
 --- !u!65 &6485485761564758916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -202,6 +203,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.85, y: 0.7, z: 1}
   m_Center: {x: 0.02, y: 0.48, z: 0}
+--- !u!114 &7756277886512054828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666783773287921498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0742e2535061cdc4aa43cf4ae657154a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitAndDie: {fileID: 6760440725859845430}
+  destroy: {fileID: 6666783773287921498}
 --- !u!1 &6667002689076176046
 GameObject:
   m_ObjectHideFlags: 0
